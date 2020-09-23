@@ -1,6 +1,6 @@
 from constants import NUM_ROWS, NUM_COLS, CHAIN_LEN
 
-class ArrayManipulator:
+class ArrayManipulator(object):
     def __init__(self):
         self._array = []
         for r in range(NUM_ROWS):
