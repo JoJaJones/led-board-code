@@ -41,5 +41,4 @@ class GradualGradient(ArrayManipulator):
                 self.cur_x = 0
                 self.cur_y += 1
 
-
-    return True
+        return True
