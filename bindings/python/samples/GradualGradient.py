@@ -4,7 +4,7 @@ from constants import NUM_ROWS, NUM_COLS, CHAIN_LEN
 class GradualGradient(ArrayManipulator):
     def __init__(self):
         super(GradualGradient, self).__init__()
-        self._array[0][0] == 0xffffff
+        self._array[0][0] = 0xffffff
 
         self.cur_x = 1
         self.cur_y = 0
@@ -14,7 +14,7 @@ class GradualGradient(ArrayManipulator):
             for col in range(len(row)):
                 row[col] = 0
 
-        self._array[0][0] == 0xffffff
+        self._array[0][0] = 0xffffff
 
     def process_frame(self):
         greater_than_zero = False
@@ -25,7 +25,7 @@ class GradualGradient(ArrayManipulator):
             prev = self._array[y][x-1]
             if self._array[y][x] > prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16):
                 self._array[y][x] -= 0x20000
-                print(prev)
+                print(hex(prev))
             else:
                 advance_x = True
         elif y < NUM_ROWS:
