@@ -25,7 +25,7 @@ class ArrayDisplay(DisplayBase):
                     offset_canvas.SetPixel(x, y, r, g, b)
 
             offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
-            self.usleep(100*1000)
+            self.usleep(2000*1000)
             if not self._array_manipulator.process_frame():
                 break
 
