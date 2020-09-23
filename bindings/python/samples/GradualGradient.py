@@ -31,8 +31,8 @@ class GradualGradient(ArrayManipulator):
         print(x, y)
         if y == 0:
             prev = self._array[y][x-1]
-            if self._array[x][y] == 0:
-                self._array[x][y] = prev
+            if self._array[y][x] == 0:
+                self._array[y][x] = prev
 
             # print(prev, hex(prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16)))
             if self._array[y][x] > prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16):
@@ -42,8 +42,8 @@ class GradualGradient(ArrayManipulator):
                 advance_x = True
         elif y < NUM_ROWS:
             prev = self._array[y-1][x]
-            if self._array[x][y] == 0:
-                self._array[x][y] = prev
+            if self._array[y][x] == 0:
+                self._array[y][x] = prev
 
             if self._array[y][x] > prev - ((0xff//NUM_ROWS)<<8):
                 self._array[y][x] -= 0x100
