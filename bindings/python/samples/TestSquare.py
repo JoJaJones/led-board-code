@@ -4,15 +4,11 @@ from constants import *
 
 class TestSquare(ArrayManipulator):
     def __init__(self, infinite = True):
-        self._array = []
+        super(TestSquare, self).__init__()
         self._forever = infinite
         for r in range(NUM_ROWS):
-            self._array.append([])
-            for _ in range(NUM_COLS*CHAIN_LEN):
+            for _ in range(len(self._array[r])):
                 self._array[r].append(randint(0x888888, 0xFFFFFF))
-
-    def get_canvas(self):
-        return self._array
 
     def process_frame(self):
         greater_than_zero = False
