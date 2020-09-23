@@ -3,9 +3,9 @@ from random import randint
 from constants import *
 
 class TestSquare(ArrayManipulator):
-    def __init__(self, *args, infinite = True, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(TestSquare, self).__init__(*args, **kwargs)
-        self._forever = infinite
+        self._forever = True
         for r in range(NUM_ROWS):
             for _ in range(len(self._array[r])):
                 self._array[r].append(randint(0x888888, 0xFFFFFF))

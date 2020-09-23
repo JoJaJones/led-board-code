@@ -1,5 +1,5 @@
 from DisplayBase import DisplayBase
-from TestSquare import TestSquare
+from GradualGradient import GradualGradient
 
 class ArrayDisplay(DisplayBase):
     def __init__(self, *args, **kwargs):
