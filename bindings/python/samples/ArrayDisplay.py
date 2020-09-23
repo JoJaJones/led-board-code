@@ -32,6 +32,6 @@ class ArrayDisplay(DisplayBase):
 
 if __name__ == "__main__":
     array_display = ArrayDisplay()
-    array_display.add_array_manipulator(TestSquare())
+    array_display.add_array_manipulator(GradualGradient())
     if (not array_display.process()):
         array_display.print_help()

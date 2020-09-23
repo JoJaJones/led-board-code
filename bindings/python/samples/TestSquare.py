@@ -3,8 +3,8 @@ from random import randint
 from constants import *
 
 class TestSquare(ArrayManipulator):
-    def __init__(self, infinite = True):
-        super(TestSquare, self).__init__()
+    def __init__(self, *args, infinite = True, **kwargs):
+        super(TestSquare, self).__init__(*args, **kwargs)
         self._forever = infinite
         for r in range(NUM_ROWS):
             for _ in range(len(self._array[r])):
