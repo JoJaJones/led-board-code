@@ -1,4 +1,5 @@
 from ArrayManipulator import ArrayManipulator
+from constants import NUM_ROWS, NUM_COLS, CHAIN_LEN
 
 class GradualGradient(ArrayManipulator):
     def __init__(self):
