@@ -1,7 +1,7 @@
 from constants import NUM_ROWS, NUM_COLS, CHAIN_LEN
 
 class ArrayManipulator:
-    def __init__(self, *args, **kwargs):
+    def __init__(self):
         self._array = []
         for r in range(NUM_ROWS):
             self._array.append([])

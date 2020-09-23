@@ -1,8 +1,8 @@
 from ArrayManipulator import ArrayManipulator
 
 class GradualGradient(ArrayManipulator):
-    def __init__(self, *args, **kwargs):
-        super(GradualGradient, self).__init__(*args, **kwargs)
+    def __init__(self):
+        super().__init__(self)
         self._array[0][0] == 0xffffff
 
         self.cur_x = 1
