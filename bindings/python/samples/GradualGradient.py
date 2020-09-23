@@ -25,9 +25,10 @@ class GradualGradient(ArrayManipulator):
         advance_x = False
         if y == 0:
             prev = self._array[y][x-1]
+            print(prev, hex(prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16)))
             if self._array[y][x] > prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16):
                 self._array[y][x] -= 0x20000
-                print(hex(prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16)))
+
             else:
                 advance_x = True
         elif y < NUM_ROWS:
