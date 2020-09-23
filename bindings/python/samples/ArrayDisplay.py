@@ -17,7 +17,7 @@ class ArrayDisplay(DisplayBase):
         width = len(self._array[0])
         while True:
             for x in range(width):
-                for y in (height):
+                for y in range(height):
                     color = self._array[y][x]
                     r = (color &0xFF0000) >> 16
                     g = (color & 0xFF00) >> 8
