@@ -38,7 +38,7 @@ class GradualGradient(ArrayManipulator):
             if self._array[y][x] > prev - ((0xff//(NUM_COLS*CHAIN_LEN))<<16):
                 self._array[y][x] -= 0x20000
 
-            elif count != 0 and count & 1 == 0:
+            elif self.count != 0 and self.count & 1 == 0:
                 advance_x = True
         elif y < NUM_ROWS:
             prev = self._array[y-1][x]
@@ -47,7 +47,7 @@ class GradualGradient(ArrayManipulator):
 
             if self._array[y][x] > prev - ((0xff//NUM_ROWS)<<8):
                 self._array[y][x] -= 0x100
-            elif count != 0 and count & 1 == 0:
+            elif self.count != 0 and self.count & 1 == 0:
                 advance_x = True
         else:
             self.reset_array()
