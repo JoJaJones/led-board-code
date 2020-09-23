@@ -3,8 +3,9 @@ from random import randint
 from constants import *
 
 class TestSquare(ArrayManipulator):
-    def __init__(self):
+    def __init__(self, infinite = True):
         self._array = []
+        self._forever = infinite
         for r in range(NUM_ROWS):
             self._array.append([])
             for _ in range(NUM_COLS*CHAIN_LEN):
@@ -25,10 +26,16 @@ class TestSquare(ArrayManipulator):
                 which = randint(0,2)
                 if which == 0:
                     r = randint(r//2, r)
+                    if r == 0 and self._forever:
+                        r = 0xff
                 elif which == 1:
                     g = randint(g//2, g)
+                    if g == 0 and self._forever:
+                        g = 0xff
                 else:
                     b = randint(b//2, b)
+                    if b == 0 and self._forever:
+                        b = 0xff
 
                 r<<=16
                 g<<=8
