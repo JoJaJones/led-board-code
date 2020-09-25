@@ -12,7 +12,7 @@ class AntDisplay(ArrayManipulator):
         self.displayObj = LEDDisplay(self.test_board.get_positions())
 
     def process_frame(self):
-        for r in enumerate(self.displayObj.render(self.test_board.get_positions())):
+        for r, row in enumerate(self.displayObj.render(self.test_board.get_positions())):
             for c, col in enumerate(row):
                 self._array[r][c] = col
         self.test_board.move_all_ants()
