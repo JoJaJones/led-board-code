@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     if choice == 2:
         array_display.add_array_manipulator(GradualGradient())
-    elif choice = 3:
+    elif choice == 3:
         array_display.add_array_manipulator(AntDisplay())
     else:
         array_display.add_array_manipulator(TestSquare())

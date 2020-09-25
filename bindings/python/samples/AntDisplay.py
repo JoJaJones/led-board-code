@@ -1,7 +1,7 @@
-from Ant.constants import *
-from Ant.Display import LEDDisplay
-from Ant.Ant import Ant
-from Ant.Board import Board
+from ant.constants import *
+from ant.Display import LEDDisplay
+from ant.Ant import Ant
+from ant.Board import Board
 
 class AntDisplay(ArrayManipulator):
     def __init__(self):
