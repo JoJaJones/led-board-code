@@ -22,7 +22,7 @@ class ScreenDisplay(Display):
         self._color_processor = ScreenColorProcessor()
         self._color_transmitter = ScreenColorTransmitter()
 
-class ScreenDisplay(Display):
+class LEDDisplay(Display):
     def __init__(self, board):
         self._board = [row[:] for row in board]
         self._shape_converter = BasicShapeConverter(len(board), len(board[0]))

@@ -1,6 +1,7 @@
 from DisplayBase import DisplayBase
 from TestSquare import TestSquare
 from GradualGradient import GradualGradient
+from AntDisplay import AntDisplay
 
 class ArrayDisplay(DisplayBase):
     def __init__(self, *args, **kwargs):
@@ -36,12 +37,14 @@ if __name__ == "__main__":
     choice = 0
     try:
         print("Which Display?")
-        choice = int(input("1 - Random, 2 - gradient"))
+        choice = int(input("1 - Random\n2 - gradient\n3 - Ant\n"))
     except:
         choice = 1
 
     if choice == 2:
         array_display.add_array_manipulator(GradualGradient())
+    elif choice = 3:
+        array_display.add_array_manipulator(AntDisplay())
     else:
         array_display.add_array_manipulator(TestSquare())
 
