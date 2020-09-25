@@ -1,4 +1,5 @@
-from constants import *
+from ant.constants import *
+
 
 
 class ColorProcessor:
