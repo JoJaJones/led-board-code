@@ -26,6 +26,7 @@ class LEDDisplay(Display):
     def __init__(self, board):
         self._board = [row[:] for row in board]
         self._shape_converter = BasicShapeConverter(len(board), len(board[0]))
+        self._color_processor = LEDColorProcessor()
 
     def render(self, board):
         self._board = self._shape_converter.convert_shape(board)
