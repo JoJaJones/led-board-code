@@ -1,4 +1,5 @@
 from DisplayBase import DisplayBase
+from TestSquare import TestSquare
 from GradualGradient import GradualGradient
 
 class ArrayDisplay(DisplayBase):
@@ -25,13 +26,24 @@ class ArrayDisplay(DisplayBase):
                     offset_canvas.SetPixel(x, y, r, g, b)
 
             offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
-            self.usleep(2000*1000)
+            self.usleep(15*1000)
             if not self._array_manipulator.process_frame():
                 break
 
 
 if __name__ == "__main__":
     array_display = ArrayDisplay()
-    array_display.add_array_manipulator(GradualGradient())
+    choice = 0
+    try:
+        print("Which Display?")
+        choice = int(input("1 - Random, 2 - gradient"))
+    except:
+        choice = 1
+
+    if choice == 2:
+        array_display.add_array_manipulator(GradualGradient())
+    else:
+        array_display.add_array_manipulator(TestSquare())
+
     if (not array_display.process()):
         array_display.print_help()
