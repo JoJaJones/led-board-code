@@ -19,7 +19,7 @@ SCREEN_COLOR_DICT = {"white": 40, "red": 41, "green": 42, "blue": 44, "purple": 
                      "dark gray": 100, "light red": 101, "yellow": 103,
                      "cyan": 106, "black": 107}
 
-LED_COLOR_DICT = {"white": 0xFFFFFF, "black": 0x0, "red": 0xFF0000, "green": 0xFF00, "blue": 0xFF}
+LED_COLOR_DICT = {"white": 0xff4635, "black": 0xdaff35, "red": 0xFF0000, "green": 0xFF00, "blue": 0x5a35ff}
 
 
 DESIGN_DICT = {1: ["cyclic flower"], 2: ["star"], 3: ["flower"]}
