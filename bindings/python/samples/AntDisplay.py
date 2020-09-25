@@ -17,4 +17,5 @@ class AntDisplay(ArrayManipulator):
                 self._array[r][c] = col
         self.test_board.move_all_ants()
 
+        return True
 
