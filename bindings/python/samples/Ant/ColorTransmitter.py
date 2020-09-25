@@ -21,3 +21,9 @@ class ScreenColorTransmitter(ColorTransmitter):
         for col in board[0]:
             print("═══", end="")
         print("═╝")
+
+
+class LEDColorTransmitter(ColorTransmitter):
+    def transmit_colors(self, board):
+        pass
+

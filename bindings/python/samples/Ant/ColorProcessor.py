@@ -15,3 +15,7 @@ class ColorProcessor:
 class ScreenColorProcessor(ColorProcessor):
     def __init__(self):
         super().__init__(SCREEN_COLOR_DICT)
+
+class LEDColorProcessor(ColorProcessor):
+    def __init__(self):
+        super().__init__(LED_COLOR_DICT)

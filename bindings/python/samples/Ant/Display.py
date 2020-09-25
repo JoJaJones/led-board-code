@@ -21,3 +21,13 @@ class ScreenDisplay(Display):
         self._shape_converter = BasicShapeConverter(len(board), len(board[0]))
         self._color_processor = ScreenColorProcessor()
         self._color_transmitter = ScreenColorTransmitter()
+
+class ScreenDisplay(Display):
+    def __init__(self, board):
+        self._board = [row[:] for row in board]
+        self._shape_converter = BasicShapeConverter(len(board), len(board[0]))
+
+    def render(self, board):
+        self._board = self._shape_converter.convert_shape(board)
+        self._color_processor.process_colors(self._board)
+        return self._board

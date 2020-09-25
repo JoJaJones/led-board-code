@@ -4,7 +4,7 @@ from constants import *
 
 
 class Position:
-    def __init__(self, color="black", ant_color="teal", swap_rule = ColorChangeBehavior()):
+    def __init__(self, color="black", ant_color="blue", swap_rule = ColorChangeBehavior()):
         self.color = color
         self.first_change = True
         self.second_visit = False
