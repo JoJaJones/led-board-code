@@ -1,5 +1,5 @@
-from constants import *
-from MoveBehavior import MoveBehavior
+from ant.constants import *
+from ant.MoveBehavior import MoveBehavior
 from random import choice, randint
 
 

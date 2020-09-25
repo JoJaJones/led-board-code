@@ -1,6 +1,6 @@
-from ShapeConverter import *
-from ColorProcessor import *
-from ColorTransmitter import *
+from ant.ShapeConverter import *
+from ant.ColorProcessor import *
+from ant.ColorTransmitter import *
 
 class Display:
     def __init__(self, board, num_displays, display_config = None):

@@ -1,4 +1,4 @@
-from constants import DIRECTIONS
+from ant.constants import DIRECTIONS
 
 class TurnBehavior:
     def __init__(self, turn_type = 1, num_colors = 2, color_list = ["white", "black"]):

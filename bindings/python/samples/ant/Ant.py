@@ -1,7 +1,7 @@
-from MoveBehavior import MoveBehavior
-from EdgeBehavior import *
-from TurnBehavior import TurnBehavior
-from constants import *
+from ant.MoveBehavior import MoveBehavior
+from ant.EdgeBehavior import *
+from ant.TurnBehavior import TurnBehavior
+from ant.constants import *
 
 class Ant:
     def __init__(self, speed = 1, edge_type = "T", turn_type = 1, pos = (0,1), direction = UP, num_colors = 2,

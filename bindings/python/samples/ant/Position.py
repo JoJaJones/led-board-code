@@ -1,6 +1,6 @@
-from ColorChangeBehavior import ColorChangeBehavior
-from Ant import Ant
-from constants import *
+from ant.ColorChangeBehavior import ColorChangeBehavior
+from ant.Ant import Ant
+from ant.constants import *
 
 
 class Position:

@@ -2,6 +2,7 @@ from ant.constants import *
 from ant.Display import LEDDisplay
 from ant.Ant import Ant
 from ant.Board import Board
+from ArrayManipulator import ArrayManipulator
 
 class AntDisplay(ArrayManipulator):
     def __init__(self):

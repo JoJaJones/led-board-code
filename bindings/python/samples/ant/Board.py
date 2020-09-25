@@ -1,6 +1,6 @@
-from Ant import Ant
-from Position import Position
-from constants import *
+from ant.Ant import Ant
+from ant.Position import Position
+from ant.constants import *
 
 class Board:
     def __init__(self, ant_list: list = None):
